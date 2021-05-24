@@ -1,3 +1,3 @@
 # chinook-hrlnsnchz
 
-<iframe width="560" height="315" src='https://dbdiagram.io/embed/60abd282b29a09603d164c24'> </iframe>
+<img width="560" height="315" src='https://dbdiagram.io/embed/60abd282b29a09603d164c24'>
