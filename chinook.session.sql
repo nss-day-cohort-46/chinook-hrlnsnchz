@@ -3,3 +3,7 @@ SELECT FirstName, LastName, CustomerId, Country FROM Customer WHERE Country IS N
 
 -- brazil_customers.sql: Provide a query only showing the Customers from Brazil.
 SELECT * FROM Customer Where Country = 'Brazil';
+
+-- brazil_customers_invoices.sql: Provide a query showing the Invoices of customers who are from Brazil. The resultant table should 
+-- show the customer's full name, Invoice ID, Date of the invoice and billing country.
+SELECT C.FirstName, C.LastName, InvoiceID, InvoiceDate, BillingCountry FROM Invoice JOIN Customer C WHERE C.Country = 'Brazil';
