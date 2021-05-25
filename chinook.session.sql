@@ -36,7 +36,14 @@ JOIN Customer C ON I.CustomerId = C.CustomerId
 JOIN Employee E ON C.SupportRepId = E.EmployeeId;
 
 -- total_invoices_{year}.sql: How many Invoices were there in 2009 and 2011?
-SELECT SUM(Invoice.InvoiceId) FROM Invoice
+SELECT SUM(InvoiceId) FROM Invoice
+WHERE InvoiceDate >= '2009-01-01 00:00:00'
+AND InvoiceDate < '2010-01-01 00:00:00'
+OR InvoiceDate >= '2011-01-01 00:00:00'
+AND InvoiceDate < '2012-01-01 00:00:00';
+
+-- total_sales_{year}.sql: What are the respective total sales for each of those years?
+SELECT SUM(Total) FROM Invoice
 WHERE InvoiceDate >= '2009-01-01 00:00:00'
 AND InvoiceDate < '2010-01-01 00:00:00'
 OR InvoiceDate >= '2011-01-01 00:00:00'
