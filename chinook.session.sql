@@ -26,3 +26,10 @@ I.BillingCity, I.BillingState, I.BillingCountry, I.BillingPostalCode, I.Total
 FROM Invoice I 
 JOIN Customer C ON I.CustomerId = C.CustomerId 
 JOIN Employee E ON C.SupportRepId = E.EmployeeId;
+
+-- invoice_totals.sql: Provide a query that shows the Invoice Total, Customer name, 
+-- Country and Sale Agent name for all invoices and customers.
+SELECT I.Total, C.FirstName AS CustomerFirstName, C.LastName AS CustomerLastName, C.Country, E.FirstName AS AgentFirstName, E.LastName AS AgentLastName
+FROM Invoice I
+JOIN Customer C ON I.CustomerId = C.CustomerId
+JOIN Employee E ON C.SupportRepId = E.EmployeeId;
